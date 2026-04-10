@@ -1,0 +1,103 @@
+footer {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+
+    #contact{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #mail{
+        max-width: 800px;
+        flex-shrink: 0;
+
+        input, textarea{
+            border: none;
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        textarea{
+            height: 80px;
+            resize: vertical;
+            overflow: auto;
+        }
+
+        button{
+            border: none;
+            width: 130px;
+            padding: 10px 20px;
+            margin-top: 5px;  
+            border-radius: 20px; 
+            font-size: 16px;
+        }
+
+        button:hover{
+            cursor: pointer;
+            background-color: $secondary-color;
+            color: white;
+            box-shadow:0 0 10px white;
+        }
+    }
+
+    hr{
+        width: 0px;
+        height: 250px;
+        display: flex;
+        margin-top: 0px;
+    }    
+
+    .links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 690px;
+        gap: 90px;
+
+        #resume{
+            width: 180px;
+            height: 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            background-color: white;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover{
+                cursor: pointer;
+                color: white;
+                background-color: $secondary-color;
+                box-shadow: 0 0 10px white;
+            }
+        }
+
+        #github{
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            gap: 10px;
+            margin-left: -80px;
+
+            i{
+                margin-left: 140px;
+
+                &:hover{
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}
+
+    
+
+

@@ -1,0 +1,63 @@
+@import './config', "./contact", "./menu", "./projects";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #0D0D0D;
+    color: $primary-color;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    padding: 1rem;
+    width: 100%;
+}
+
+.about {
+    margin-top: 10rem;
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 8rem;
+        gap: 25px;
+    }
+
+    .last_name {
+        color: $secondary-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+}
+
+hr {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+
+

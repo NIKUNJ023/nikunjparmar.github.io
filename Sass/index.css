@@ -1,0 +1,500 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+footer {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+footer #contact {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  gap: 20px;
+}
+footer #mail {
+  max-width: 800px;
+  flex-shrink: 0;
+}
+footer #mail input, footer #mail textarea {
+  border: none;
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+}
+footer #mail textarea {
+  height: 80px;
+  resize: vertical;
+  overflow: auto;
+}
+footer #mail button {
+  border: none;
+  width: 130px;
+  padding: 10px 20px;
+  margin-top: 5px;
+  border-radius: 20px;
+  font-size: 16px;
+}
+footer #mail button:hover {
+  cursor: pointer;
+  background-color: darkorange;
+  color: white;
+  box-shadow: 0 0 10px white;
+}
+footer hr {
+  width: 0px;
+  height: 250px;
+  display: flex;
+  margin-top: 0px;
+}
+footer .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 690px;
+  gap: 90px;
+}
+footer .links #resume {
+  width: 180px;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .links #resume:hover {
+  cursor: pointer;
+  color: white;
+  background-color: darkorange;
+  box-shadow: 0 0 10px white;
+}
+footer .links #github {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: 10px;
+  margin-left: -80px;
+}
+footer .links #github i {
+  margin-left: 140px;
+}
+footer .links #github i:hover {
+  color: darkorange;
+}
+
+.nav {
+  position: fixed;
+  top: 5%;
+  left: 0;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+.nav .menuNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: 0.5px solid white;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 7vh;
+  background: transparent;
+  list-style-type: none;
+  flex-shrink: 0;
+  transition: width 0.5s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 10000;
+}
+.nav .menuNav_link {
+  display: inline-block;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: 300;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.nav .menuNav_link:hover {
+  color: darkorange;
+  text-shadow: 1px 1px 10px rgb(255, 255, 255);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menuNav {
+    width: 400px !important;
+  }
+  .menuNav_link {
+    font-size: 1rem !important;
+    margin: 15px !important;
+  }
+}
+@media (max-width: 768px) {
+  .menuNav {
+    width: 300px !important;
+  }
+  .menuNav_link {
+    font-size: 0.8rem !important;
+    margin: 10px !important;
+  }
+}
+.projects {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.projects .slider {
+  position: absolute;
+  width: 250px;
+  height: 270px;
+  top: 10%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: spin 10s linear infinite;
+}
+.projects .slider:hover {
+  animation-play-state: paused;
+  transition: ease-in-out;
+}
+.projects .slider .project {
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: rotateY(calc((var(--position) - 1) * 36deg)) translateZ(350px);
+}
+.projects .slider .project img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.project2 {
+  width: 75vw;
+  height: 450px;
+  background: #1A1A1A;
+  display: flex;
+  gap: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 100px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px white;
+}
+.project2 .content {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 450px;
+}
+.project2 .content h1 {
+  font-size: 35px;
+  font-weight: 300;
+  padding-bottom: 50px;
+}
+.project2 .content .info p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project2 .content .buttons {
+  display: flex;
+  margin-top: 100px;
+  gap: 100px;
+}
+.project2 .content .buttons button {
+  background: linear-gradient(-30deg, black 50%, darkorange);
+  color: white;
+  border: 0;
+  box-shadow: none;
+  border-radius: 50px;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+  height: 50px;
+  font-size: 22px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  font-family: "Fira Code", monospace;
+}
+.project2 .content .buttons button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg);
+  transition: left 0.7s ease;
+  pointer-events: none;
+}
+.project2 .content .buttons button:hover::before {
+  left: 100%;
+}
+.project2 .image {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 10px;
+}
+.project2 .image img {
+  width: 400px;
+  height: 230px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 10px;
+}
+
+.project1 {
+  width: 75vw;
+  height: 450px;
+  background: #1A1A1A;
+  display: flex;
+  gap: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 100px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px white;
+}
+.project1 .content {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 450px;
+}
+.project1 .content h1 {
+  font-size: 35px;
+  font-weight: 300;
+  padding-bottom: 50px;
+}
+.project1 .content .info p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project1 .content .buttons {
+  display: flex;
+  margin-top: 100px;
+  gap: 100px;
+}
+.project1 .content .buttons button {
+  background: linear-gradient(-30deg, black 50%, darkorange);
+  color: white;
+  border: 0;
+  box-shadow: none;
+  border-radius: 50px;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+  height: 50px;
+  font-size: 22px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  font-family: "Fira Code", monospace;
+}
+.project1 .content .buttons button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg);
+  transition: left 0.7s ease;
+  pointer-events: none;
+}
+.project1 .content .buttons button:hover::before {
+  left: 100%;
+}
+.project1 .image {
+  width: 320px;
+  height: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 10px;
+}
+.project1 .image img {
+  width: 230px;
+  height: 300px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 10px;
+}
+
+.project3 {
+  width: 75vw;
+  height: 450px;
+  background: #1A1A1A;
+  display: flex;
+  gap: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 100px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px white;
+}
+.project3 .content {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 450px;
+}
+.project3 .content h1 {
+  font-size: 35px;
+  font-weight: 300;
+  padding-bottom: 50px;
+}
+.project3 .content .info p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project3 .content .buttons {
+  display: flex;
+  margin-top: 100px;
+  gap: 100px;
+}
+.project3 .content .buttons button {
+  background: linear-gradient(-30deg, black 50%, darkorange);
+  color: white;
+  border: 0;
+  box-shadow: none;
+  border-radius: 50px;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+  height: 50px;
+  font-size: 22px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  font-family: "Fira Code", monospace;
+}
+.project3 .content .buttons button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg);
+  transition: left 0.7s ease;
+  pointer-events: none;
+}
+.project3 .content .buttons button:hover::before {
+  left: 100%;
+}
+.project3 .image {
+  width: 320px;
+  height: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 10px;
+}
+.project3 .image img {
+  width: 300px;
+  height: 230px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0D0D0D;
+  color: white;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  padding: 1rem;
+  width: 100%;
+}
+
+.about {
+  margin-top: 10rem;
+}
+.about h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8rem;
+  gap: 25px;
+}
+.about .last_name {
+  color: darkorange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.about p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+hr {
+  margin-bottom: 25px;
+  margin-top: 25px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}/*# sourceMappingURL=index.css.map */

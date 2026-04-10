@@ -1,0 +1,111 @@
+.nav {
+    position: fixed;
+    top: 5%;
+    left: 0;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+
+    .menuNav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        border: 0.5px solid $primary-color;
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 7vh;
+        background: transparent;
+        list-style-type: none;
+        flex-shrink: 0;
+        transition: width 0.5s ease;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 10000;
+        
+        &_link {
+            display: inline-block;
+            color: $primary-color;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            padding: 2rem 0;
+            font-weight: 300;
+            margin-left: 20px;
+            margin-right: 20px;
+
+            &:hover {
+                color: $secondary-color;
+                text-shadow: 1px 1px 10px rgba(255,255,255,1);
+            }
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $primary-color;
+}
+
+@media (min-width:768px) and (max-width:1024px){
+    
+    .menuNav{
+        width: 400px !important;
+    }
+
+    .menuNav_link {
+        font-size: 1rem !important;
+        margin: 15px !important;
+    }
+}
+
+@media (max-width:768px) {
+
+    .menuNav {
+        width: 300px !important;
+    }
+
+    .menuNav_link {
+        font-size: 0.8rem !important;
+        margin: 10px !important;
+    }
+}
+
+// .menuBtn {
+//     height: 30px;
+//     width: 30px;
+//     top: 1.5rem;
+//     right: 1rem;
+//     position: absolute;
+//     z-index: 1;
+//     cursor: pointer;
+    
+//     .menu-btn {
+//        position: absolute;
+//        right: 0;
+//        top: 0.5rem;
+//        width: 30px;
+//        height: 3px;
+//        background-color: $primary-color;
+
+//        &::before {
+//             content: "";
+//             position: absolute;
+//             top: -8px;
+//             width: 30px;
+//             height: 3px;
+//             background-color: $primary-color;
+//        }
+
+//        &::after {
+//             content: "";
+//             position: absolute;
+//             top: 8px;
+//             width: 30px;
+//             height: 3px;
+//             background-color: $primary-color;
+//        }
+        
+//     }
+// }
+
